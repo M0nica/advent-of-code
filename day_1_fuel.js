@@ -127,12 +127,10 @@ function getFuelAmount(mass) {
   return amount;
 }
 
-function getTotalFuelAmount(modules) {
-  let amount = 0;
-  for (module of modules) {
-    amount = amount + getFuelAmount(parseInt(module));
-  }
-  return amount;
+function getTotalFuelAmount(masses) {
+  return masses
+    .map(mass => getFuelAmount(parseInt(mass)))
+    .reduce((a, b) => a + b, 0);
 }
 
 // console.log(getTotalFuelAmount(input)); // Challenge 1.1
