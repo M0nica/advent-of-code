@@ -1,0 +1,15 @@
+{
+  "name": "advent-of-code",
+  "author": "Monica Powell <monica@aboutmonica.com>",
+  "description": "2019 Advent of Code solutions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
