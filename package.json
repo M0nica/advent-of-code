@@ -2,6 +2,7 @@
   "name": "advent-of-code",
   "author": "Monica Powell <monica@aboutmonica.com>",
   "description": "2019 Advent of Code solutions",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

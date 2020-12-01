@@ -1,13 +1,13 @@
 const checkPassword = require("./day_4_secure_container");
 
-describe("isCorrectSize", () => {
+describe("isCorrectLength", () => {
   test("012345 should return TRUE", () => {
     const input = "012345";
-    expect(checkPassword.isCorrectSize(input)).toBe(true);
+    expect(checkPassword.isCorrectLength(input)).toBe(true);
   });
   test("01234  should return FALSE", () => {
     const input = "01234";
-    expect(checkPassword.isCorrectSize(input)).toBe(false);
+    expect(checkPassword.isCorrectLength(input)).toBe(false);
   });
 });
 
@@ -60,16 +60,14 @@ describe("countPossiblePasswords", () => {
   });
 });
 
-describe("hasNoMoreThanTwoDuplicatesInARow", () => {
+describe("hasExactlyTwoDuplicatesInARow", () => {
   test("112233 returns true", () => {
-    expect(checkPassword.hasNoMoreThanTwoDuplicatesInARow("112233")).toBe(true);
+    expect(checkPassword.hasExactlyTwoDuplicatesInARow("112233")).toBe(true);
   });
   test("111122 returns true", () => {
-    expect(checkPassword.hasNoMoreThanTwoDuplicatesInARow("111122")).toBe(true);
+    expect(checkPassword.hasExactlyTwoDuplicatesInARow("111122")).toBe(true);
   });
   test("123444 returns false because of 444", () => {
-    expect(checkPassword.hasNoMoreThanTwoDuplicatesInARow("123444")).toBe(
-      false
-    );
+    expect(checkPassword.hasExactlyTwoDuplicatesInARow("123444")).toBe(false);
   });
 });

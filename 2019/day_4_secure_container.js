@@ -1,4 +1,4 @@
-function isCorrectSize(value) {
+function isCorrectLength(value) {
   return value.length === 6;
 }
 
@@ -27,7 +27,9 @@ function hasTwoDuplicatesInARow(value) {
   return false;
 }
 
-function hasNoMoreThanTwoDuplicatesInARow(value) {
+/* need atleast one pair of two duplicates that is not a part 
+of a longer repeated sequence*/
+function hasExactlyTwoDuplicatesInARow(value) {
   const numbers = value.split("");
   let prevNum;
   let streak = 0;
@@ -48,20 +50,31 @@ function passesRules(value) {
   return (
     hasIncreasingNumbers(value) &&
     hasTwoDuplicatesInARow(value) &&
-    isCorrectSize(value)
+    isCorrectLength(value)
   );
 }
 
 function passesRulesPartTwo(value) {
   return (
     hasIncreasingNumbers(value) &&
-    hasNoMoreThanTwoDuplicatesInARow(value) &&
-    isCorrectSize(value)
+    hasExactlyTwoDuplicatesInARow(value) &&
+    isCorrectLength(value)
   );
 }
 
-function countPossiblePasswords(valueA, valueB) {
-  const formattedInput = generateNumbersFromRange(valueA, valueB);
+function generateNumbersFromRange(low, high) {
+  const rangeSize = high - low - 1;
+  const numArray = [];
+  let valueToAdd = low + 1;
+  while (numArray.length != rangeSize) {
+    numArray.push(valueToAdd.toString());
+    valueToAdd++;
+  }
+  return numArray;
+}
+
+function countPossiblePasswords(low, high) {
+  const formattedInput = generateNumbersFromRange(low, high);
   let passesRulesCount = 0;
   for (input of formattedInput) {
     const isValid = passesRules(input);
@@ -70,8 +83,8 @@ function countPossiblePasswords(valueA, valueB) {
   return passesRulesCount;
 }
 
-function countPossiblePasswordsPartTwo(valueA, valueB) {
-  const formattedInput = generateNumbersFromRange(valueA, valueB);
+function countPossiblePasswordsPartTwo(low, high) {
+  const formattedInput = generateNumbersFromRange(low, high);
   let passesRulesCount = 0;
   for (input of formattedInput) {
     const isValid = passesRulesPartTwo(input);
@@ -80,26 +93,15 @@ function countPossiblePasswordsPartTwo(valueA, valueB) {
   return passesRulesCount;
 }
 
-function generateNumbersFromRange(valueA, valueB) {
-  const rangeSize = valueB - valueA - 1;
-  const numArray = [];
-  let valueToAdd = valueA + 1;
-  while (numArray.length != rangeSize) {
-    numArray.push(valueToAdd.toString());
-    valueToAdd++;
-  }
-  return numArray;
-}
-
 // console.log(countPossiblePasswords(236491, 713787)); //1169
 // console.log(countPossiblePasswordsPartTwo(236491, 713787)); //757
 
 module.exports = {
-  isCorrectSize,
+  isCorrectLength,
   hasTwoDuplicatesInARow,
   hasIncreasingNumbers,
   passesRules,
   generateNumbersFromRange,
   countPossiblePasswords,
-  hasNoMoreThanTwoDuplicatesInARow
+  hasExactlyTwoDuplicatesInARow
 };
