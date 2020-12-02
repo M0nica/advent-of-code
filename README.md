@@ -10,8 +10,8 @@ https://adventofcode.com/
 ### 2020
 | Challenge                                                                        | Status |
 | -------------------------------------------------------------------------------- | :----: |
-| Day 01: [Day 1: Report Repair](https://adventofcode.com/2020/day/1)              |  \*\*  |
-
+| Day 01: [Report Repair](https://adventofcode.com/2020/day/1)              |  \*\*  |
+| Day 02: [Password Philosophy](https://adventofcode.com/2020/day/2)              |  \*\*  |
 
 ### 2019
 | Challenge                                                                        | Status |
