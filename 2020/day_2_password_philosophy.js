@@ -14,21 +14,18 @@ function validAtPasswordsAtCreation(passwordsWithRules) {
   for (const phrase of passwordsWithRules) {
     if (phrase.length) {
       const password = phrase.split(":")[1];
-
       const validRange = /\d*-\d*/.exec(phrase)[0];
-      const lowerLimit = validRange.split("-")[0];
-      const upperLimit = validRange.split("-")[1];
-
+      const [lowerLimit, upperLimit] = validRange.split("-");
       const desiredLetter = /[a-z]:/.exec(phrase)[0][0];
 
       let count = 0;
-      for (let inx in password) {
-        if (password[inx] == desiredLetter) {
+      for (let characterIdx in password) {
+        if (password[characterIdx] == desiredLetter) {
           count++;
         }
 
         if (
-          inx == password.length - 1 &&
+          characterIdx == password.length - 1 &&
           count >= lowerLimit &&
           count <= upperLimit
         ) {
@@ -50,18 +47,19 @@ function validAtPasswordsAtCreationBasedOnPosition(passwordsWithRules) {
 
   for (const phrase of passwordsWithRules) {
     let correctPositions = 0;
+
     if (phrase.length) {
       const password = phrase.split(":")[1];
 
-      const validIndices = /\d*-\d*/.exec(phrase)[0];
-      const firstIdx = validIndices.split("-")[0];
-      const secondIdx = validIndices.split("-")[1];
+      const validIndices = /\d*-\d*/.exec(phrase)[0].split("-");
 
       const desiredLetter = /[a-z]:/.exec(phrase)[0][0];
 
-      if (password[firstIdx] == desiredLetter) correctPositions++;
-
-      if (password[secondIdx] == desiredLetter) correctPositions++;
+      for (let idx of validIndices) {
+        if (password[idx] == desiredLetter) {
+          correctPositions++;
+        }
+      }
 
       if (correctPositions == 1) {
         validPasswords++;
