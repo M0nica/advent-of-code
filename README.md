@@ -12,6 +12,7 @@ https://adventofcode.com/
 | -------------------------------------------------------------------------------- | :----: |
 | Day 01: [Report Repair](https://adventofcode.com/2020/day/1)              |  \*\*  |
 | Day 02: [Password Philosophy](https://adventofcode.com/2020/day/2)              |  \*\*  |
+| Day 04: [Passport Processing](https://adventofcode.com/2020/day/4)              |  \*\*  |
 
 ### 2019
 | Challenge                                                                        | Status |
