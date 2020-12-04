@@ -1,6 +1,4 @@
-import { count } from "console";
 import { createRequire } from "module";
-import * as h from "../helpers.js";
 
 const require = createRequire(import.meta.url);
 const fs = require("fs");
