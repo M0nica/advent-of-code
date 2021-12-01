@@ -10,7 +10,7 @@ https://adventofcode.com/
 
 | Challenge                                                    | Status |
 | ------------------------------------------------------------ | :----: |
-| Day 01: [Report Repair](https://adventofcode.com/2021/day/1) |  \*\*  |
+| Day 01: [Sonar Sweep](https://adventofcode.com/2021/day/1) |  \*\*  |
 
 ### 2020
 
