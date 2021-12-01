@@ -23,6 +23,7 @@ function countIncreasing(numarr) {
 countIncreasing(numarr); //1696
 
 /* part two */
+/* this solution is less optimal way of manually calculating and comparing the sums of the windows when all we care about is if numarr[i] < numarr[i+3] */
 function countThreeIncreasing(numarr) {
   // Instead, consider sums of a three-measurement sliding window.
   let count = 0;
@@ -41,7 +42,23 @@ function countThreeIncreasing(numarr) {
       count++;
     }
   }
+
   return count;
 }
 
 countThreeIncreasing(numarr); //1737
+
+/* this solutio nis more optimal of just focusing on numarr[i] < numarr[i+3] calculation instead of the numbers that are the same between the two windows */
+function simpleCountThreeIncreasing(numarr) {
+  // Instead, consider sums of a three-measurement sliding window.
+  let count = 0;
+
+  for (let i = 0; i < numarr.length - 3; i++) {
+    if (numarr[i] < numarr[i + 3]) {
+      count++;
+    }
+  }
+  return count;
+}
+
+simpleCountThreeIncreasing(numarr); //1737
