@@ -8,6 +8,7 @@ const data = fs.readFileSync("./inputs/day_1.txt").toString();
 
 const numarr = h.numInput(data);
 
+/* part one */
 function countIncreasing(numarr) {
   let count = 0;
   for (let i = 0; i < numarr.length - 1; i++) {
@@ -15,7 +16,32 @@ function countIncreasing(numarr) {
       count++;
     }
   }
+
   return count;
 }
 
-countIncreasing(numarr);
+countIncreasing(numarr); //1696
+
+/* part two */
+function countThreeIncreasing(numarr) {
+  // Instead, consider sums of a three-measurement sliding window.
+  let count = 0;
+
+  const getWindowSum = (itemIndices) =>
+    itemIndices.reduce((acc, index) => {
+      const value = numarr[index];
+      return acc + value;
+    }, 0);
+
+  for (let i = 0; i < numarr.length - 3; i++) {
+    const currentWindow = getWindowSum([i, i + 1, i + 2]);
+    const nextWindow = getWindowSum([i + 1, i + 2, i + 3]);
+
+    if (nextWindow > currentWindow) {
+      count++;
+    }
+  }
+  return count;
+}
+
+countThreeIncreasing(numarr); //1737
