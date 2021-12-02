@@ -4,7 +4,7 @@ import * as h from "../helpers.js";
 const require = createRequire(import.meta.url);
 const fs = require("fs");
 
-const data = fs.readFileSync("./inputs/day_2.txt").toString();
+const data = fs.readFileSync("../2021-AOC-inputs/day_2.txt").toString();
 const steps = h.strInput(data);
 
 /* part one */

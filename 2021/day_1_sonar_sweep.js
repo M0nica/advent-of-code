@@ -4,7 +4,7 @@ import * as h from "../helpers.js";
 const require = createRequire(import.meta.url);
 const fs = require("fs");
 
-const data = fs.readFileSync("./inputs/day_1.txt").toString();
+const data = fs.readFileSync("../2021-AOC-inputs/day_1.txt").toString();
 
 const numarr = h.numInput(data);
 
@@ -17,6 +17,7 @@ function countIncreasing(numarr) {
     }
   }
 
+  // console.log(count);
   return count;
 }
 
@@ -42,7 +43,7 @@ function countThreeIncreasing(numarr) {
       count++;
     }
   }
-
+  // console.log(count);
   return count;
 }
 
