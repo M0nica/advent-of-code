@@ -8,9 +8,10 @@ https://adventofcode.com/
 
 ### 2021
 
-| Challenge                                                    | Status |
-| ------------------------------------------------------------ | :----: |
+| Challenge                                                  | Status |
+| ---------------------------------------------------------- | :----: |
 | Day 01: [Sonar Sweep](https://adventofcode.com/2021/day/1) |  \*\*  |
+| Day 02: [Dive](https://adventofcode.com/2021/day/2)        |  \*\*  |
 
 ### 2020
 
@@ -30,6 +31,7 @@ https://adventofcode.com/
 
 Previous years:
 
+- [http://adventofcode.com/2020](http://adventofcode.com/2020)
 - [http://adventofcode.com/2019](http://adventofcode.com/2019)
 - [http://adventofcode.com/2018](http://adventofcode.com/2018)
 - [http://adventofcode.com/2017](http://adventofcode.com/2017)
