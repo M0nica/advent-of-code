@@ -8,10 +8,11 @@ https://adventofcode.com/
 
 ### 2021
 
-| Challenge                                                  | Status |
-| ---------------------------------------------------------- | :----: |
-| Day 01: [Sonar Sweep](https://adventofcode.com/2021/day/1) |  \*\*  |
-| Day 02: [Dive](https://adventofcode.com/2021/day/2)        |  \*\*  |
+| Challenge                                                        | Status |
+| ---------------------------------------------------------------- | :----: |
+| Day 01: [Sonar Sweep](https://adventofcode.com/2021/day/1)       |  \*\*  |
+| Day 02: [Dive](https://adventofcode.com/2021/day/2)              |  \*\*  |
+| Day 03: [Binary Diagnostic](https://adventofcode.com/2021/day/3) |   \*   |
 
 ### 2020
 
