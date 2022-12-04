@@ -6,6 +6,14 @@ This repository contains my solutions to Advent of Code 2019 and 2020
 
 https://adventofcode.com/
 
+### 2022
+
+| Challenge                                                        | Status |
+| ---------------------------------------------------------------- | :----: |
+| Day 01: [Calorie Counting](https://adventofcode.com/2022/day/1)       |  \*\*  |
+
+
+
 ### 2021
 
 | Challenge                                                        | Status |
