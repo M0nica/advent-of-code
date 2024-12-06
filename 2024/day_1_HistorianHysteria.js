@@ -46,4 +46,41 @@ function findDiffBetweenLists() {
  return totalDiff
 }
 
-console.log(findDiffBetweenLists())
+// console.log(findDiffBetweenLists())
+
+
+// part II
+
+/// This time, you'll need to figure out exactly how often each number from the left list appears in the right list. Calculate a total similarity score by adding up each number in the left list after multiplying it by the number of times that number appears in the right list.
+
+function countFrequencyInList(list){
+
+     const { first, second } = sortLists();
+
+
+    let frequencies = {}
+    for (let item of second){
+ if(!isNaN(item)){
+        frequencies[item] = (frequencies[item] || 0) + 1
+       }
+    }
+
+      return frequencies;
+}
+
+//console.log(countFrequencyInList())
+
+function getSimilarityScore(){
+      const { first, second } = sortLists();
+
+      const frequencies = countFrequencyInList();
+
+
+   return  first.reduce((acc, item) => {
+   const multiplier =  item * frequencies[item]
+
+     return acc + (isNaN(multiplier) ? 0 : multiplier)
+   }, 0)
+}
+
+console.log(getSimilarityScore())
